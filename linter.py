@@ -20,15 +20,15 @@ class Pylint(PythonLinter):
 
     syntax = 'python'
     cmd = (
-        'pylint@python',
+        'pylint',
         '--msg-template=\'{line}:{column}:{msg_id}: {msg}\'',
         '--module-rgx=.*',  # don't check the module name
         '--reports=n',      # remove tables
         '--persistent=n',   # don't save the old score (no sense for temp)
     )
-    version_args = '--version'
-    version_re = r'pylint.* (?P<version>\d+\.\d+\.\d+),'
-    version_requirement = '>= 1.0'
+    #version_args = '--version'
+    #version_re = r'pylint.* (?P<version>\d+\.\d+\.\d+),'
+    #version_requirement = '>= 1.0'
     regex = (
         r'^(?P<line>\d+):(?P<col>\d+):'
         r'(?P<code>(?:(?P<error>[FE])|(?P<warning>[CIWR]))\d+): '
@@ -58,7 +58,7 @@ class Pylint(PythonLinter):
         '--rcfile=': '',
     }
     inline_overrides = ('enable', 'disable')
-    check_version = True
+    check_version = False
 
     #############
     # Try to extract a meaningful columns.
