@@ -26,3 +26,6 @@ This is what I did in OS X, something similar should work for you.
 
 ## Caveats
 This works for me. In my setup. It may work for you too. Give it a try.
+
+### Alternative
+Before I started using pyenv I made my own shim just for SublimeLinter. I've documented that setup in the [wiki](https://github.com/rgant/SublimeLinter-pylint/wiki/Alternative-Setup).
